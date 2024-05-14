@@ -1,4 +1,4 @@
-import { elementIdType} from "../commercePanel/UiComponents"
+import { elementIdType} from "../core/UiComponents"
 import { getBooleanFromString } from "../core/coreUtils"
 
 
@@ -39,6 +39,7 @@ export class checkout{
     main(value) {
     
         cy.task('printInConsole', {'checkout': 'checkout started'})
+        cy.addContext("Checkout started");
 
         if(getBooleanFromString(value.isGuestCheckout)){
              cy.get("[value='Checkout as Guest']").click()
@@ -57,5 +58,8 @@ export class checkout{
               billDetailsMap.Fax = value.Fax
               this.billindAddressDetails(billDetailsMap)
         }
-        }
+                cy.addContext("Checkout finished");
+
+        }        
+
 }

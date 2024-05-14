@@ -1,4 +1,4 @@
-import { textShouldBeVisible } from "../commercePanel/UiComponents"
+import { textShouldBeVisible } from "../core/UiComponents"
 import { getBooleanFromString } from "../core/coreUtils"
 
 
@@ -27,6 +27,8 @@ export class productBrowsingAndSearching{
     main(value) {
     
         cy.task('printInConsole', {'product listing': 'product listing'})
+        cy.addContext("product listing started");
+
         //click computers category
         this.clickCategoryLink(value.category)
        
@@ -70,6 +72,9 @@ export class productBrowsingAndSearching{
             cy.get("[value='Add to cart']").eq(value.prodIndex).should('not.exist')
             return;
         }
+
+        cy.addContext("product listing finished");
+
 
         
 

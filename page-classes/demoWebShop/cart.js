@@ -1,4 +1,4 @@
-import { elementIdClick } from "../commercePanel/UiComponents"
+import { elementIdClick } from "../core/UiComponents"
 
 
 export class cart{
@@ -19,13 +19,18 @@ export class cart{
 
     main(value) {
     
-       cy.task('printInConsole', {'cart': 'cart started'})
+       cy.task('printInConsole', 'Cart started')
 
        cy.get(".page-title").should('contain','Shopping cart')
 
        var productPrice=Cypress.env('productPrice')
 
        cy.task('printInConsole', {'product price is': productPrice})
+
+       cy.addContext("cart started");
+
+       // cy.addContext("product price is "+productPrice);
+       //cy.addContext("product price is "+str(productPrice));
 
        cy.xpath("(//*[@class='product-price order-total'])[1]/Strong[1]").should('contain',productPrice)
 
@@ -34,5 +39,8 @@ export class cart{
        elementIdClick('termsofservice')
 
        elementIdClick('checkout')
+
+       cy.task('printInConsole', 'Cart finished')
+
 }
 }

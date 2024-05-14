@@ -16,13 +16,14 @@ export class demoWebShopRegression{
 
     demoWebShopRegression(value) {
     
-        cy.task('printInConsole', {'demoWebShop': 'demoWebShop Regression started'})
-        
-         cy.visit(Cypress.env('demoUrl'))
-         cy.wait(2000)
+        cy.addContext("demoWebShop Regression started");   
+        cy.visit(Cypress.env('demoUrl'))
+        cy.wait(2000)
         this.productObj.callproductBrowsingAndSearching(value.productData)
         this.cartObj.callCart(value.cartData)
         this.checkoutObj.callCheckout(value.checkoutData)
+        cy.addContext("demoWebShop Regression finished");
+
         
     }
 }

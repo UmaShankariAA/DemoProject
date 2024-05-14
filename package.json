@@ -1,5 +1,5 @@
 {
-  "name": "shopup-cypress-automation-framework",
+  "name": "demo-cypress-automation-framework",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -8,8 +8,8 @@
     "flow-record-no-ui-ci": "cypress run --no-runner-ui -b chrome --record --tag 'CI' --key $key --env grepTags=$TAGS,Execution=$Execution,projectId=$projectId --spec",
     "flow-record-no-ui": "cypress run --no-runner-ui -b chrome --record --tag 'Daily' --key $key --env grepTags=$TAGS,Execution=$Execution,projectId=$projectId --spec",
     "flow-record": "cypress run -b chrome --headed --record --key $key --env grepTags=$TAGS,Execution=$Execution,projectId=$projectId --spec",
-    "flow": "cypress run -b chrome --headed --env grepTags=$TAGS,Execution=$Execution --spec",
-    "flow-config-record": "cypress run -b chrome --headed --config-file  cypress/configs/mokam/cypress.config.js  --record --key $key --env grepTags=$TAGS,Execution=$Execution,projectId=$projectId --spec"
+    "flow": "cypress run -b chrome --headed --env Execution=$Execution --spec",
+    "flow-config-record": "cypress run -b chrome --headed --config-file  cypress/configs/cypress.config.js  --record --key $key --env grepTags=$TAGS,Execution=$Execution,projectId=$projectId --spec"
   },
   "author": "Uma Shankari",
   "license": "MIT",

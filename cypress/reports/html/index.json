@@ -12,13 +12,13 @@
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "start": "2024-04-28T22:03:09.051Z",
-    "end": "2024-04-28T22:03:23.257Z",
-    "duration": 14206
+    "start": "2024-05-14T15:09:00.059Z",
+    "end": "2024-05-14T15:09:14.736Z",
+    "duration": 14677
   },
   "results": [
     {
-      "uuid": "4009d989-dcf7-4237-a5b1-bcf214153c45",
+      "uuid": "a9c6f367-ed1b-4600-84a5-2647f71efdf3",
       "title": "",
       "fullFile": "test-suite/demoWebShop/demoWebShop.cy.js",
       "file": "test-suite/demoWebShop/demoWebShop.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "adfe3d13-b256-45d2-a85f-72b510f12f7f",
+          "uuid": "72d39339-6908-4090-a0b1-5f195aedec65",
           "title": "Demo Web shop",
           "fullFile": "test-suite/demoWebShop/demoWebShop.cy.js",
           "file": "test-suite/demoWebShop/demoWebShop.cy.js",
@@ -38,29 +38,29 @@
               "title": "Demo web shop : DWS_001",
               "fullTitle": "Demo Web shop Demo web shop : DWS_001",
               "timedOut": null,
-              "duration": 11774,
+              "duration": 12054,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": null,
+              "context": "[\n    \"demoWebShop Regression started\",\n    \"product listing started\",\n    \"product listing finished\",\n    \"cart started\",\n    \"Checkout started\",\n    \"Checkout finished\",\n    \"demoWebShop Regression finished\"\n]",
               "code": "cy.task('parseXlsx', {\n  filePath: demoWebObj.filePath,\n  sheetName: demoWebObj.sheetName,\n  rows: [testCase]\n}).then(result => {\n  demoWebObj.demoWebShopRegression(result[\"data\"][0]);\n});",
               "err": {},
-              "uuid": "e9cb0481-49b3-4047-885f-0796bd83b293",
-              "parentUUID": "adfe3d13-b256-45d2-a85f-72b510f12f7f",
+              "uuid": "cfb67157-8a66-4044-a757-3e49c48e46d9",
+              "parentUUID": "72d39339-6908-4090-a0b1-5f195aedec65",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "e9cb0481-49b3-4047-885f-0796bd83b293"
+            "cfb67157-8a66-4044-a757-3e49c48e46d9"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 11774,
+          "duration": 12054,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
